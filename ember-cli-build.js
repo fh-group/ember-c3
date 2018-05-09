@@ -14,5 +14,8 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
+  app.import('node_modules/c3/c3.js', { using: [ { transformation: 'cjs', as: 'c3' } ] });
+  app.import('node_modules/c3/c3.css');
+
   return app.toTree();
 };
